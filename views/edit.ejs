@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    
+</head>
+<body>
+    <div class="container">
+        <a href="/read" class="back">See all Users</a>
+        <h1 class="heading">EDIT USER</h1>
+        <form action="/update/<%= currentUser._id %>" method="post" class="formContainer">
+            <input type="text" placeholder="Name" name="username" value="<%= currentUser.username %>">
+            <input type="text" placeholder="email" name="email" value="<%= currentUser.email %>">
+            <input type="text" placeholder="image" name="image" value="<%= currentUser.image %>">
+            <input type="submit" value="Submit" class="" style="background-color: rgb(252, 252, 138); ">
+        </form>
+    </div>
+</body>
+</html>
